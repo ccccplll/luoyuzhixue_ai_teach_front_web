@@ -1,4 +1,4 @@
-﻿import { BrowserRouter, Route, Routes } from 'react-router-dom';
+﻿import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
@@ -10,7 +10,7 @@ import { TeacherPage } from './pages/TeacherPage';
 
 export function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen bg-[#fff8ec] text-[#12346e] selection:bg-[#f4d58c] selection:text-[#0b2d73]">
         <Header />
         <Routes>
@@ -25,6 +25,7 @@ export function App() {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
+
