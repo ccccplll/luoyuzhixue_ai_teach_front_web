@@ -1,0 +1,84 @@
+﻿@import "tailwindcss";
+
+:root {
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color-scheme: light;
+  background: #fff8ec;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255, 225, 166, 0.58), transparent 28%),
+    radial-gradient(circle at 84% 12%, rgba(19, 76, 157, 0.18), transparent 33%),
+    radial-gradient(circle at 88% 48%, rgba(212, 154, 54, 0.16), transparent 30%),
+    linear-gradient(135deg, #fffaf2 0%, #f9ecd1 42%, #e7f2ff 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(12, 63, 143, .15) 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(201, 131, 30, .22) 1px, transparent 1.6px);
+  background-position: 0 0, 34px 46px;
+  background-size: 88px 88px, 120px 120px;
+  opacity: .32;
+  z-index: -1;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff8ec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0b2d73, #d49a36);
+  border-radius: 999px;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: .25; transform: scale(.8); }
+  50% { opacity: 1; transform: scale(1.35); }
+}
+
+@keyframes flow-card {
+  0%, 100% { transform: translateY(0); box-shadow: 0 14px 42px rgba(11, 45, 115, .08); }
+  50% { transform: translateY(-7px); box-shadow: 0 22px 60px rgba(11, 45, 115, .14); }
+}
+
+.animate-twinkle {
+  animation: twinkle 2.6s ease-in-out infinite;
+}
+
+.course-flow-card {
+  animation: flow-card 3.2s ease-in-out infinite;
+}
+
+@keyframes cat-blink {
+  0%, 88%, 100% { transform: scaleY(1); }
+  92%, 96% { transform: scaleY(.12); }
+}
+
+.cat-eye {
+  transform-origin: center;
+  animation: cat-blink 3.4s ease-in-out infinite;
+}
